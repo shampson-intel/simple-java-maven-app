@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Pre-Setup') {
+            steps {
+                sh '. ~/.bashrc'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
