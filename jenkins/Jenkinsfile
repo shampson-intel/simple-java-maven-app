@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Pre-Setup') {
             steps {
-                sh '. ~/.bashrc'
+                sh 'source ~/.bashrc'
             }
         }
         stage('Build') {
